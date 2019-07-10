@@ -15,9 +15,7 @@ class Add : AbsRpc() {
     fun add(
         @RpcDesc("第一个参数") a: Int,
         @RpcDesc("第二个参数") b: Int
-    ): Int {
-        return a + b
-    }
+    ) = a + b
 }
 
 fun main() {
