@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.3.41'
+    id 'org.jetbrains.dokka' version '0.9.18'
+    id 'io.gitlab.arturbosch.detekt' version '1.0.0-RC14'
+}
+
+group 'loli'
+version '0.8'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.26'
+
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.8.1'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.26'
+    compile group: 'com.github.salomonbrys.kotson', name: 'kotson', version: '2.5.0'
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: '1.3.41'
+    compile group: 'io.ktor', name: 'ktor-server-netty', version: '1.1.4'
+    compile group: 'io.ktor', name: 'ktor-client-apache', version: '1.1.4'
+    compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
+}
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
