@@ -24,7 +24,9 @@ fun main() {
     StartRpcJson().start(conf)
 }
 ```
-最后启动main函数，在浏览器中输入：http://127.0.0.1:8000/explain，看到如下的界面：
+最后启动main函数，在浏览器中输入：http://127.0.0.1:8000/explain
+
+看到如下的界面：
 
 ![服务定义页面](doc/loli-core-1.jpg)
 
@@ -43,3 +45,7 @@ fun main() {
 ![方法定义页面](doc/loli-core-5.jpg)
 
 ### 简单说明
+1. 服务启动后，会在指定host和port启动一个http的服务
+2. 外界通过http的post模式发送json请求给本服务
+3. 服务解析json请求，找到对应的方法并调用
+4. 服务返回方法的调用结果给用户(json)
