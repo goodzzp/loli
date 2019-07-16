@@ -2,16 +2,7 @@ plugins {
     id 'java'
     id 'org.jetbrains.kotlin.jvm' version '1.3.41'
     id 'org.jetbrains.dokka' version '0.9.18'
-    id 'io.gitlab.arturbosch.detekt' version '1.0.0-RC14'
-}
-
-group 'loli'
-version '0.8'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+//    id 'io.gitlab.arturbosch.detekt' version '1.0.0-RC14'
 }
 
 dependencies {
@@ -28,13 +19,11 @@ dependencies {
     compile group: 'org.reflections', name: 'reflections', version: '0.9.11'
 }
 
+sourceCompatibility = 1.8
+
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
-}
-
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
 }

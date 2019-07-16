@@ -1,0 +1,17 @@
+subprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+
+//    dependencies {
+//        testCompile group: 'junit', name: 'junit', version: '4.12'
+//    }
+
+    group 'net.easy3w'
+    version = '0.1'
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}
