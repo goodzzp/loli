@@ -1,6 +1,6 @@
 # Loli：基于kotlin的基础微服务构架
 ## 1、快速使用
-1. 建立一个kotlin项目，引用loli-core，参考：
+1. 建立一个kotlin项目，引用loli-core，参考(build.gradle)：
 ```groovy
 dependencies {
     compile "net.easy3w:loli-core:0.2"
